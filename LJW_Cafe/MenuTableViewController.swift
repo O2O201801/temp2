@@ -35,20 +35,21 @@ class MenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.menuList.count
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        return appDelegate.menuList.count
+        return menuList.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Menu Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Menu Cell", for: indexPath) //as coffeeCell
         
 
         // Configure the cell...
         let menus = Array(menuList.keys)
         let menu = menus[indexPath.row]
         let numCount: Int = menuList[menu]!
-
+        //cell.labelCoffeeName.text =
         cell.textLabel?.text = menu
         cell.detailTextLabel?.text = "\(numCount)원"
         

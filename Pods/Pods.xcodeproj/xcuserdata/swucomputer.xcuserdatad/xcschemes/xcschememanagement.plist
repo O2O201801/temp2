@@ -8,15 +8,21 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+<<<<<<< HEAD
 			<key>orderHint</key>
 			<integer>0</integer>
+=======
+>>>>>>> 0bdbe4eae3cb7e72c6cee62b676770407e18bf9b
 		</dict>
 		<key>Pods-LJW_Cafe.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+<<<<<<< HEAD
 			<key>orderHint</key>
 			<integer>1</integer>
+=======
+>>>>>>> 0bdbe4eae3cb7e72c6cee62b676770407e18bf9b
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

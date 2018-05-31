@@ -68,11 +68,22 @@ class CafeTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+//        if segue.identifier == "toMenuView" {
+//            if let destination = segue.destination as? MenuTableViewController {
+//                if let selectedIndex = self.tableView.indexPathsForSelectedRows?.first?.row {
+//                    print(selectedIndex)
+//                    destination.title = Array(swucafe.keys) [selectedIndex]
+//                    destination.menuList = Array(swucafe.values) [selectedIndex]
+//                }
+//            }
+//        }
+        
         if segue.identifier == "toMenuView" {
-            if let destination = segue.destination as? MenuTableViewController {
-                if let selectedIndex = self.tableView.indexPathsForSelectedRows?.first?.row {
-                    destination.title = Array(swucafe.keys) [selectedIndex]
-                    destination.menuList = Array(swucafe.values) [selectedIndex]
+            if let tabVC:UITabBarController = segue.destination as? UITabBarController {
+                if let menuVC:MenuTableViewController = tabVC.viewControllers?.first as! MenuTableViewController {
+                    let selectedIndex = self.tableView.indexPathForSelectedRow?.row
+                    menuVC.title = Array(swucafe.keys)[selectedIndex!]
+                    menuVC.menuList = Array(swucafe.values)[selectedIndex!]
                 }
             }
         }
