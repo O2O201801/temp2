@@ -27,32 +27,42 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func logintapped() {
-        let userEmail = userEmailTextField.text;
-        let userPassword = userPasswordTextField.text;
-        let userEmailStored = UserDefaults.standard.string(forKey: "UserEmail")
-        let userPasswordStored = UserDefaults.standard.string(forKey: "UserPassword")
+        //let userEmail = userEmailTextField.text;
+        //let userPassword = userPasswordTextField.text;
+        //let userEmailStored = UserDefaults.standard.string(forKey: "UserEmail")
+        //let userPasswordStored = UserDefaults.standard.string(forKey: "UserPassword")
+        let parameters:[String:[String:String]] = [
+            "user":[
+                "email":userEmailTextField.text!,
+                "password":userPasswordTextField.text!
+            ]
+        ]
         //register와 login 데이터 비교
         
-        print(userEmailStored)
-        print(userEmail)
+        let url = "http://192.168.35.49:6010/login"
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseString
+            { response in
+                
+                if (response.result.value == "Login Success")
+                {
+                    // Login is successful
+                    UserDefaults.standard.set(true, forKey:"isUserLoggedIn")
+                    //UserDefaults.standard.synchronize()
+                    self.dismiss(animated: true, completion: nil)
+                    self.displayMyAlertMessage(userMessage: "로그인 성공")
+                }
+                else if (response.result.value == "Login Failed")
+                {
+                    self.displayMyAlertMessage(userMessage: "로그인 실패")
+                }
+                else
+                {
+                    self.displayMyAlertMessage(userMessage: "등록되지 않은 email입니다")
+                }
+                
+        }
         
-        if(userEmailStored == userEmail)
-        {
-            if(userPasswordStored == userPassword)
-            {
-                // Login is successful
-                UserDefaults.standard.set(true, forKey:"isUserLoggedIn")
-                //UserDefaults.standard.synchronize()
-                self.dismiss(animated: true, completion: nil)
-                displayMyAlertMessage(userMessage: "로그인 성공")
-            }
-            else {
-                displayMyAlertMessage(userMessage: "로그인 실패")
-            }
-        }
-        else {
-            displayMyAlertMessage(userMessage: "등록되지 않은 email입니다")
-        }
+        
     }
     
     func displayMyAlertMessage(userMessage:String)
