@@ -20,7 +20,8 @@ global.db = connection;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-var routes = require("./routes/register.js")(app);
+var register = require("./routes/register.js")(app);
+var login = require("./routes/login.js")(app);
 
 var server = app.listen(6010,'192.168.35.49', function () {
     console.log("Listening on port %s...", server.address().port);
