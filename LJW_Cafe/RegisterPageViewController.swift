@@ -36,55 +36,53 @@ class RegisterPageViewController: UIViewController,UITextFieldDelegate {
                 "password":userPasswordTextField.text!
             ]
         ]
-        let url = "http://172.16.9.223:3000/applogin"
-        Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseString
-            { response in
-                
-                print(response)
-                print(response.result)
-                print(response.result.isSuccess)
-                print(parameters)
-        }
         // Check for empty fields
         if((userEmail?.isEmpty)! || (userPassword?.isEmpty)! || (userRepeatPassword?.isEmpty)!)
         {
             //Display alert message
-            displayMyAlertMessage(userMessage: "All fields are required");
+            displayMyAlertMessage(userMessage: "All fields are required.");
             return
         }
         
         //Check if passwords match
-        if(userPassword != userRepeatPassword)
+        else if(userPassword != userRepeatPassword)
         {
             // Display an alert message
-            displayMyAlertMessage(userMessage: "Passwords do not match");
+            displayMyAlertMessage(userMessage: "Passwords do not match.");
             return
         }
         
-        
-        //print(userEmail)
-        
-        
-        // Store data--register와 login 데이터 비교
-        UserDefaults.standard.set(userEmail, forKey:"UserEmail")
-        UserDefaults.standard.set(userPassword, forKey:"UserPassword")
-        //UserDefaults.standard.synchronize()
-        
-        //print(UserDefaults.standard.string(forKey: "UserEmail"))
-        
-        // Display alert message with confirmation
-        let myAlert = UIAlertController(title : "Alert", message:"Registration is successful. Thank you!", preferredStyle : UIAlertControllerStyle.alert)
-        
-        let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default)
+        else
         {
-            action in
-            self.dismiss(animated: true, completion:nil)
+            // connect to server
+            let url = "http://192.168.35.49:6010/register"
+            Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseString
+                { response in
+                    
+                    if (response.result.value == "Register Failed")
+                    {
+                        self.displayMyAlertMessage(userMessage: "Email already exists.")
+                    }
+                    else
+                    {
+                         // Display alert message with confirmation
+                        let myAlert = UIAlertController(title : "Alert", message:"Registration is successful. Thank you!", preferredStyle : UIAlertControllerStyle.alert)
+                        
+                        let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default)
+                        {
+                            action in
+                            self.dismiss(animated: true, completion:nil)
+                        }
+                        myAlert.addAction(okAction)
+                        self.present(myAlert, animated:true, completion:nil)
+                    }
+                    
+                    
+            }
         }
-        myAlert.addAction(okAction)
-        self.present(myAlert, animated:true, completion:nil)
+        
+       
     }
-    
-    
     
     func displayMyAlertMessage(userMessage:String)
     {
@@ -98,7 +96,7 @@ class RegisterPageViewController: UIViewController,UITextFieldDelegate {
     }
     
 
-// TextField Delegate (수지)
+// TextField Delegate
 func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     return true

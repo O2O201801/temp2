@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController,UITextFieldDelegate {
 
@@ -64,7 +65,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
         self.present(myAlert, animated: true, completion: nil)
     }
-    // TextField Delegate (수지)
+    // TextField Delegate 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
