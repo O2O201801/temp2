@@ -80,7 +80,7 @@ class CafeTableViewController: UITableViewController {
         
         if segue.identifier == "toMenuView" {
             if let tabVC:UITabBarController = segue.destination as? UITabBarController {
-                if let menuVC:MenuTableViewController = tabVC.viewControllers?.first as! MenuTableViewController {
+                if let menuVC:MenuTableViewController = tabVC.viewControllers?.first as? MenuTableViewController {
                     let selectedIndex = self.tableView.indexPathForSelectedRow?.row
                     menuVC.title = Array(swucafe.keys)[selectedIndex!]
                     menuVC.menuList = Array(swucafe.values)[selectedIndex!]

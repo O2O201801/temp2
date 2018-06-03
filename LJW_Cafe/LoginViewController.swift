@@ -39,7 +39,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         ]
         //register와 login 데이터 비교
         
-        let url = "http://192.168.35.49:6010/login"
+        let url = "http://172.30.1.45:6010/login"
         Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseString
             { response in
                 

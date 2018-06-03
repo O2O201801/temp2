@@ -58,7 +58,21 @@ class MenuTableViewController: UITableViewController {
         return cell
     }
     
-    
+    override func prepare (for segue: UIStoryboardSegue, sender: Any?) { // Get the new view controller using segue.destinationViewController. // Pass the selected object to the new view controller.
+        if segue.identifier == "toDetailView" {
+            if let destination = segue.destination as? DetailViewController {
+          
+                if let selectedIndex = self.tableView.indexPathsForSelectedRows?.first?.row {
+                    let menus = Array(menuList.keys)
+                    let menu = menus[selectedIndex]
+                    let numCount: Int = menuList[menu]!
+                    
+                   destination.Detailmenu = menu
+                   destination.Price = numCount
+                }
+            }
+        }
+    }
     
 
     /*

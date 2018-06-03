@@ -29,23 +29,27 @@ class CartTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.cart.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cart Cell", for: indexPath)
 
         // Configure the cell...
 
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        var cafeName = Array(appDelegate.cart.keys)
+        cell.textLabel?.text = cafeName[indexPath.row]
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

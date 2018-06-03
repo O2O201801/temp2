@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var menuList: [String : Int] = [:]
     var menu : [String] = []
     var numCount : [Int] = []
-    var cart: [String] = []
+    var cart: [String : Int] = [:]
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
