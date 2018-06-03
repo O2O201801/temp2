@@ -162,7 +162,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Dqq-Z4-xzF" kind="show" id="NjO-b4-e1m"/>
+                                    <segue destination="Dqq-Z4-xzF" kind="show" identifier="toDetailView" id="NjO-b4-e1m"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -425,6 +425,9 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Cart" id="jmd-R3-nnX"/>
                     <navigationItem key="navigationItem" title="Title" id="XVa-dS-WMF"/>
+                    <connections>
+                        <outlet property="cartTab" destination="jmd-R3-nnX" id="N3B-ZY-Ey4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2jC-6q-d11" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -21,8 +21,6 @@ class DetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         menuname.text = Detailmenu
-        print(Detailmenu)
-        print(Price)
         menuprice.text = String(Price)
     }
 
@@ -38,6 +36,10 @@ class DetailViewController: UIViewController {
         print(Price)
         print(Detailmenu)
         appDelegate.cart.updateValue(Price, forKey: Detailmenu)
+        
+        let tabController = appDelegate.window?.rootViewController
+        let tableVC = tabController?.childViewControllers[2].childViewControllers[1] as! CartTableViewController
+        tableVC.cartTab.badgeValue = String(format: "%d", appDelegate.cart.count)
         
         let myAlert = UIAlertController(title : "Alert", message:"장바구니에 추가되었습니다.", preferredStyle : UIAlertControllerStyle.alert)
         

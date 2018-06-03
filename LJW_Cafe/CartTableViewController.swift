@@ -9,6 +9,8 @@
 import UIKit
 
 class CartTableViewController: UITableViewController {
+    
+    @IBOutlet var cartTab: UITabBarItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
