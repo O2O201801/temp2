@@ -30,6 +30,19 @@ class MenuTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.title = viewtitle
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        var menucount = 0
+        for (_,value) in appDelegate.cart {
+            
+            menucount = menucount + value[1]
+        }
+        
+        
+        let tabController = appDelegate.window?.rootViewController
+        let tableVC = tabController?.childViewControllers[2].childViewControllers[1] as! CartTableViewController
+        tableVC.cartTab.badgeValue = String(format: "%d", menucount)
     }
 
 

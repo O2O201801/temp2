@@ -1,18 +1,29 @@
 //
-//  PayViewController.swift
+//  CompleteViewController.swift
 //  LJW_Cafe
 //
-//  Created by SWUCOMPUTER on 2018. 6. 6..
+//  Created by 김윤아 on 2018. 6. 6..
 //  Copyright © 2018년 SWUCOMPUTER. All rights reserved.
 //
 
 import UIKit
 
-class PayViewController: UIViewController {
+class CompleteViewController: UIViewController {
 
+    var time:String?
+    
+    @IBOutlet var orderdetail: UILabel!
+    @IBOutlet var amount: UILabel!
+    @IBOutlet var reservation: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        reservation.text = time
+        //reservation.text =
+        //reservation - strDate
+        
+        //orderdetail =
         // Do any additional setup after loading the view.
     }
 
@@ -31,8 +42,5 @@ class PayViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func Payment(_ sender: Any) {
-        
-    }
-    
+
 }

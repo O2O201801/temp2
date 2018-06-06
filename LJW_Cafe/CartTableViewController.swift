@@ -27,6 +27,7 @@ class CartTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -48,7 +49,9 @@ class CartTableViewController: UITableViewController {
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         var cafeName = Array(appDelegate.cart.keys)
+        var cafePay = Array(appDelegate.cart.values)
         cell.textLabel?.text = cafeName[indexPath.row]
+        cell.detailTextLabel?.text = String(cafePay[indexPath.row][1])+"개"
         return cell
     }
     
