@@ -87,8 +87,8 @@ class MenuTableViewController: UITableViewController {
                     let menu = menus[selectedIndex]
                     let numCount: Int = menuList[menu]!
                     
-                   destination.Detailmenu = menu
-                   destination.Price = numCount
+                    destination.Detailmenu = menu
+                    destination.Price = numCount
                     destination.detailtitle = viewtitle
                 }
             }

@@ -485,6 +485,7 @@
                                 <state key="normal" title="예약하기"/>
                                 <connections>
                                     <action selector="AddMenu:" destination="Dqq-Z4-xzF" eventType="touchUpInside" id="Iaw-hS-XSG"/>
+                                    <action selector="reservtapped:" destination="r35-ED-tOr" eventType="touchUpInside" id="Zhv-24-YMR"/>
                                     <segue destination="A6Z-Is-M0A" kind="show" id="eRR-Zc-hIh"/>
                                 </connections>
                             </button>
@@ -505,6 +506,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주문이 완료되었습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np7-gr-z04">
+                                <rect key="frame" x="109" y="120" width="157" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="총 금액" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJK-sk-zgW">
                                 <rect key="frame" x="69" y="335" width="255" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -519,15 +527,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="주문이 완료되었습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np7-gr-z04">
-                                <rect key="frame" x="109" y="120" width="157" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예약시간" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1R-Ix-MgY">
-                                <rect key="frame" x="38" y="396" width="303" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="예약시간" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8op-uI-aFG">
+                                <rect key="frame" x="61" y="402" width="270" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -540,7 +541,7 @@
                     <connections>
                         <outlet property="amount" destination="gJK-sk-zgW" id="nPp-cG-7oH"/>
                         <outlet property="orderdetail" destination="1R7-G0-BSF" id="cXK-i3-mzO"/>
-                        <outlet property="reservation" destination="s1R-Ix-MgY" id="foQ-vP-bc9"/>
+                        <outlet property="reservation" destination="8op-uI-aFG" id="ofC-JI-vWE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hg8-mq-Ig0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -600,11 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gO-16-j6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
             <point key="canvasLocation" x="3844" y="562"/>
-=======
-            <point key="canvasLocation" x="3829.5999999999999" y="561.76911544227892"/>
->>>>>>> 9a60f26499ece4ae6f1580fdb5a75d6f40dd34f7
         </scene>
     </scenes>
     <resources>

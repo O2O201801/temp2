@@ -10,6 +10,14 @@ import UIKit
 
 class PayViewController: UIViewController {
 
+    @IBAction func reservtapped(_ sender: Any) {
+        //예약한 부분이 없을때 alert "예약 할 상품이 없습니다"
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        if (appDelegate.cart.count == 0) {
+            displayMyAlertMessage(userMessage: "예약 한 상품이 없습니다.")
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,7 +40,22 @@ class PayViewController: UIViewController {
     }
     */
     @IBAction func Payment(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
+        if (appDelegate.cart.count == 0) {
+            displayMyAlertMessage(userMessage: "예약 한 상품이 없습니다.")
+        }
+    }
+    
+    func displayMyAlertMessage(userMessage:String)
+    {
+        let myAlert = UIAlertController(title : "Alert", message:userMessage, preferredStyle : UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default, handler:nil)
+        
+        myAlert.addAction(okAction)
+        
+        self.present(myAlert, animated: true, completion: nil)
     }
     
 }

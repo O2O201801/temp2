@@ -11,7 +11,6 @@ import UIKit
 class CompleteViewController: UIViewController {
 
     var time:String?
-    
     @IBOutlet var orderdetail: UILabel!
     @IBOutlet var amount: UILabel!
     @IBOutlet var reservation: UILabel!
@@ -29,8 +28,6 @@ class CompleteViewController: UIViewController {
         }
         amount.text = String(pay)+"원"
         reservation.text = time
-        //reservation.text =
-        //reservation - strDate
         
         //orderdetail =
         // Do any additional setup after loading the view.
