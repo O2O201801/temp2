@@ -19,6 +19,15 @@ class CompleteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        var pay = 0
+        orderdetail.text = ""
+        for (key,value) in appDelegate.cart {
+            orderdetail.text = orderdetail.text!+" "+key+" "+String(value[1])+"개 "
+            pay = pay + value[0]*value[1]
+        }
+        amount.text = String(pay)+"원"
         reservation.text = time
         //reservation.text =
         //reservation - strDate
