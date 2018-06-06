@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3BD8A8DBBA42618B7B1F6950 /* Pods_LJW_Cafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C40762185C1DAEB1DE13F7F /* Pods_LJW_Cafe.framework */; };
 		A61561F520C3CD03000C8E84 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61561F420C3CD03000C8E84 /* DetailViewController.swift */; };
+		CD225DA020C7BA9000BF14B3 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD225D9F20C7BA9000BF14B3 /* ReservationViewController.swift */; };
 		CD84AD9120BC4AFC003E74F0 /* LJW_Cafe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD84AD8F20BC4AFC003E74F0 /* LJW_Cafe.xcdatamodeld */; };
 		CD84ADA820BC4B2A003E74F0 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD84AD9E20BC4B29003E74F0 /* CartTableViewController.swift */; };
 		CD84ADA920BC4B2A003E74F0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD84AD9F20BC4B29003E74F0 /* MenuTableViewController.swift */; };
@@ -24,6 +25,7 @@
 		CDB9BA7B20C799EF009A9979 /* tumblr_nxowq7jJm31ul8y65o1_1280-1-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDB9BA7720C799EE009A9979 /* tumblr_nxowq7jJm31ul8y65o1_1280-1-1.jpg */; };
 		CDB9BA7C20C799EF009A9979 /* sample-1040-checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB9BA7820C799EE009A9979 /* sample-1040-checkmark@2x.png */; };
 		CDB9BA7D20C799EF009A9979 /* sample-316-truck.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB9BA7920C799EE009A9979 /* sample-316-truck.png */; };
+		CDF12A0620C7BE74005186BB /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF12A0520C7BE74005186BB /* PayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,7 @@
 		7C40762185C1DAEB1DE13F7F /* Pods_LJW_Cafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LJW_Cafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61561F420C3CD03000C8E84 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C0FA55CC1EFD982FDE410611 /* Pods-LJW_Cafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LJW_Cafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LJW_Cafe/Pods-LJW_Cafe.debug.xcconfig"; sourceTree = "<group>"; };
+		CD225D9F20C7BA9000BF14B3 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		CD84AD8520BC4AFC003E74F0 /* LJW_Cafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJW_Cafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD84AD9020BC4AFC003E74F0 /* LJW_Cafe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LJW_Cafe.xcdatamodel; sourceTree = "<group>"; };
 		CD84AD9720BC4AFC003E74F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		CDB9BA7720C799EE009A9979 /* tumblr_nxowq7jJm31ul8y65o1_1280-1-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tumblr_nxowq7jJm31ul8y65o1_1280-1-1.jpg"; sourceTree = "<group>"; };
 		CDB9BA7820C799EE009A9979 /* sample-1040-checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-1040-checkmark@2x.png"; sourceTree = "<group>"; };
 		CDB9BA7920C799EE009A9979 /* sample-316-truck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-316-truck.png"; sourceTree = "<group>"; };
+		CDF12A0520C7BE74005186BB /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				CD84AD8F20BC4AFC003E74F0 /* LJW_Cafe.xcdatamodeld */,
 				CD84AD9D20BC4B28003E74F0 /* LJW_Cafe-Bridging-Header.h */,
 				A61561F420C3CD03000C8E84 /* DetailViewController.swift */,
+				CD225D9F20C7BA9000BF14B3 /* ReservationViewController.swift */,
+				CDF12A0520C7BE74005186BB /* PayViewController.swift */,
 			);
 			path = LJW_Cafe;
 			sourceTree = "<group>";
@@ -254,8 +260,10 @@
 				CD84ADAB20BC4B2A003E74F0 /* ViewController.swift in Sources */,
 				CD84ADAA20BC4B2A003E74F0 /* RegisterPageViewController.swift in Sources */,
 				CD84AD9120BC4AFC003E74F0 /* LJW_Cafe.xcdatamodeld in Sources */,
+				CD225DA020C7BA9000BF14B3 /* ReservationViewController.swift in Sources */,
 				CD84ADAF20BC4B2A003E74F0 /* AppDelegate.swift in Sources */,
 				CD84ADA820BC4B2A003E74F0 /* CartTableViewController.swift in Sources */,
+				CDF12A0620C7BE74005186BB /* PayViewController.swift in Sources */,
 				CD84ADB120BC4B2A003E74F0 /* CafeTableViewController.swift in Sources */,
 				CD84ADA920BC4B2A003E74F0 /* MenuTableViewController.swift in Sources */,
 			);
