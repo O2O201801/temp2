@@ -39,7 +39,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         ]
         //register와 login 데이터 비교
         
-        let url = "http://172.30.1.45:6010/login"
+        let url = "http://172.16.12.48:6010/login"
         Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseString
             { response in
                 
@@ -48,8 +48,13 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                     // Login is successful
                     UserDefaults.standard.set(true, forKey:"isUserLoggedIn")
                     //UserDefaults.standard.synchronize()
+                    
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    
+                    appDelegate.user = self.userEmailTextField.text!
                     self.dismiss(animated: true, completion: nil)
                     self.displayMyAlertMessage(userMessage: "로그인 성공")
+                    
                 }
                 else if (response.result.value == "Login Failed")
                 {

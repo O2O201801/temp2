@@ -9,6 +9,8 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
+    
+    var viewtitle: String?
 
     var menuList: [String : Int]!
     override func viewDidLoad() {
@@ -26,6 +28,9 @@ class MenuTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = viewtitle
+    }
 
 
     // MARK: - Table view data source
@@ -71,6 +76,7 @@ class MenuTableViewController: UITableViewController {
                     
                    destination.Detailmenu = menu
                    destination.Price = numCount
+                    destination.detailtitle = viewtitle
                 }
             }
         }

@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
     
     var Detailmenu: String!
     var Price : Int!
+    var detailtitle: String?
+    
+    var cafelist: [String:Int] = ["드림":0 , "팬도로시":1, "가은":2, "비틀주스":3]
+    
+    var cafe: [NSManagedObject] = []
+    
+    var menucount:Int = 0
     
     @IBOutlet var menuname: UILabel!
     @IBOutlet var menuprice: UILabel!
@@ -23,6 +31,10 @@ class DetailViewController: UIViewController {
         menuname.text = Detailmenu
         menuprice.text = String(Price)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = detailtitle
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -30,29 +42,99 @@ class DetailViewController: UIViewController {
         
     }
     
+    
     @IBAction func AddMenu(_ sender: Any) {
+    
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        print(Price)
-        print(Detailmenu)
-        appDelegate.cart.updateValue(Price, forKey: Detailmenu)
         
-        let tabController = appDelegate.window?.rootViewController
-        let tableVC = tabController?.childViewControllers[2].childViewControllers[1] as! CartTableViewController
-        tableVC.cartTab.badgeValue = String(format: "%d", appDelegate.cart.count)
-        
-        let myAlert = UIAlertController(title : "Alert", message:"장바구니에 추가되었습니다.", preferredStyle : UIAlertControllerStyle.alert)
-        
-        let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default)
+        if (appDelegate.cart.count != 0 )
         {
-            action in
-            self.dismiss(animated: true, completion:nil)
+            if(cafelist[detailtitle!]! == cafelist[appDelegate.cafe!]!)
+            {
+                if(appDelegate.cart[Detailmenu] != nil) {
+                let count : Int = appDelegate.cart[Detailmenu]![1]
+                
+                appDelegate.cart.updateValue([Price,count+1,cafelist[detailtitle!]!], forKey: Detailmenu)
+                
+                print(appDelegate.cart[Detailmenu]!)
+                
+                displaybadge()
+                
+                let myAlert = UIAlertController(title : "Alert", message:"장바구니에 추가되었습니다.", preferredStyle : UIAlertControllerStyle.alert)
+                
+                let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default)
+                {
+                    action in
+                    self.dismiss(animated: true, completion:nil)
+                }
+                myAlert.addAction(okAction)
+                self.present(myAlert, animated:true, completion:nil)
+                }
+                else
+                {
+                    appDelegate.cart.updateValue([Price,1,cafelist[detailtitle!]!], forKey: Detailmenu)
+                    
+                    displaybadge()
+                    
+                    displayMyAlertMessage(userMessage: "장바구니에 추가되었습니다.")
+                }
+            }
+            else
+            {
+                displaybadge()
+                
+                print(appDelegate.cart)
+                displayMyAlertMessage(userMessage: "카페 당 한 번씩 주문 할 수 있습니다.")
+            }
         }
-        myAlert.addAction(okAction)
-        self.present(myAlert, animated:true, completion:nil)
+        
+        else {
+            appDelegate.cafe = detailtitle
+            
+            appDelegate.cart.updateValue([Price,1,cafelist[detailtitle!]!], forKey: Detailmenu)
+            
+            displaybadge()
+            
+            displayMyAlertMessage(userMessage: "장바구니에 추가되었습니다.")
+            
+        }
+        
+       
+        
+        
         
     }
     
+    
+    func displayMyAlertMessage(userMessage:String)
+    {
+        let myAlert = UIAlertController(title : "Alert", message:userMessage, preferredStyle : UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default, handler:nil)
+        
+        myAlert.addAction(okAction)
+        
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
+    func displaybadge()
+    {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+        
+        for (_,value) in appDelegate.cart {
+            
+            menucount = menucount + value[1]
+        }
+        
+        print(menucount)
+        
+        
+        let tabController = appDelegate.window?.rootViewController
+        let tableVC = tabController?.childViewControllers[2].childViewControllers[1] as! CartTableViewController
+        tableVC.cartTab.badgeValue = String(format: "%d", menucount)
+    }
     
     /*
     // MARK: - Navigation
