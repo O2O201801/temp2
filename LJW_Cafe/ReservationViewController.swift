@@ -12,6 +12,7 @@ class ReservationViewController: UIViewController {
 
     @IBOutlet var DatePicker: UIDatePicker!
     @IBOutlet var Date: UILabel!
+    var strDate: String = ""
     
     @IBAction func DateSelected(_ sender: Any) {
         let dateFormatter = DateFormatter()
@@ -19,8 +20,10 @@ class ReservationViewController: UIViewController {
         dateFormatter.dateStyle = DateFormatter.Style.short
         dateFormatter.timeStyle = DateFormatter.Style.short
         
-        let strDate = dateFormatter.string(from: DatePicker.date)
-        Date.text = strDate    }
+        strDate = dateFormatter.string(from: DatePicker.date)
+        Date.text = strDate
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +36,16 @@ class ReservationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func Payment(_ sender: Any) {
+    }
+    
+    override func prepare (for segue: UIStoryboardSegue, sender: Any?) { // Get the new view controller using segue.destinationViewController. // Pass the selected object to the new view controller.
+        if segue.identifier == "toReservView" {
+            if let destination = segue.destination as? CompleteViewController {
+                destination.time = strDate
+            }
+        }
+    }
     /*
     // MARK: - Navigation
 

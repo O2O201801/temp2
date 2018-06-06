@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3BD8A8DBBA42618B7B1F6950 /* Pods_LJW_Cafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C40762185C1DAEB1DE13F7F /* Pods_LJW_Cafe.framework */; };
 		A61561F520C3CD03000C8E84 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61561F420C3CD03000C8E84 /* DetailViewController.swift */; };
+		A651EFE720C7C69200DA2E00 /* CompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A651EFE620C7C69200DA2E00 /* CompleteViewController.swift */; };
 		CD225DA020C7BA9000BF14B3 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD225D9F20C7BA9000BF14B3 /* ReservationViewController.swift */; };
 		CD84AD9120BC4AFC003E74F0 /* LJW_Cafe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD84AD8F20BC4AFC003E74F0 /* LJW_Cafe.xcdatamodeld */; };
 		CD84ADA820BC4B2A003E74F0 /* CartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD84AD9E20BC4B29003E74F0 /* CartTableViewController.swift */; };
@@ -32,6 +33,7 @@
 		22E93D186EB37CB68C25964C /* Pods-LJW_Cafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LJW_Cafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-LJW_Cafe/Pods-LJW_Cafe.release.xcconfig"; sourceTree = "<group>"; };
 		7C40762185C1DAEB1DE13F7F /* Pods_LJW_Cafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LJW_Cafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A61561F420C3CD03000C8E84 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A651EFE620C7C69200DA2E00 /* CompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteViewController.swift; sourceTree = "<group>"; };
 		C0FA55CC1EFD982FDE410611 /* Pods-LJW_Cafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LJW_Cafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LJW_Cafe/Pods-LJW_Cafe.debug.xcconfig"; sourceTree = "<group>"; };
 		CD225D9F20C7BA9000BF14B3 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		CD84AD8520BC4AFC003E74F0 /* LJW_Cafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJW_Cafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 				A61561F420C3CD03000C8E84 /* DetailViewController.swift */,
 				CD225D9F20C7BA9000BF14B3 /* ReservationViewController.swift */,
 				CDF12A0520C7BE74005186BB /* PayViewController.swift */,
+				A651EFE620C7C69200DA2E00 /* CompleteViewController.swift */,
 			);
 			path = LJW_Cafe;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				CDF12A0620C7BE74005186BB /* PayViewController.swift in Sources */,
 				CD84ADB120BC4B2A003E74F0 /* CafeTableViewController.swift in Sources */,
 				CD84ADA920BC4B2A003E74F0 /* MenuTableViewController.swift in Sources */,
+				A651EFE720C7C69200DA2E00 /* CompleteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
