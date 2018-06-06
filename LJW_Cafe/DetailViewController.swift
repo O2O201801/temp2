@@ -59,9 +59,9 @@ class DetailViewController: UIViewController {
                                 
                 displaybadge()
                 
-                let myAlert = UIAlertController(title : "Alert", message:"장바구니에 추가되었습니다.", preferredStyle : UIAlertControllerStyle.alert)
+                let myAlert = UIAlertController(title : "알림", message:"장바구니에 추가되었습니다.", preferredStyle : UIAlertControllerStyle.alert)
                 
-                let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default)
+                let okAction = UIAlertAction(title:"확인", style: UIAlertActionStyle.default)
                 {
                     action in
                     self.dismiss(animated: true, completion:nil)
@@ -82,7 +82,7 @@ class DetailViewController: UIViewController {
             {
                 displaybadge()
                 
-                displayMyAlertMessage(userMessage: "카페 당 한 번씩 주문 할 수 있습니다.")
+                displayMyAlertMessage(userMessage: "한번에 한 카페에 해당하는 주문만 할 수 있습니다.")
             }
         }
         
@@ -106,9 +106,9 @@ class DetailViewController: UIViewController {
     
     func displayMyAlertMessage(userMessage:String)
     {
-        let myAlert = UIAlertController(title : "Alert", message:userMessage, preferredStyle : UIAlertControllerStyle.alert)
+        let myAlert = UIAlertController(title : "알림", message:userMessage, preferredStyle : UIAlertControllerStyle.alert)
         
-        let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default, handler:nil)
+        let okAction = UIAlertAction(title:인, style: UIAlertActionStyle.default, handler:nil)
         
         myAlert.addAction(okAction)
         

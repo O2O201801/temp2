@@ -40,7 +40,7 @@ class RegisterPageViewController: UIViewController,UITextFieldDelegate {
         if((userEmail?.isEmpty)! || (userPassword?.isEmpty)! || (userRepeatPassword?.isEmpty)!)
         {
             //Display alert message
-            displayMyAlertMessage(userMessage: "All fields are required.");
+            displayMyAlertMessage(userMessage: "모든 정보를 입력해 주세요");
             return
         }
         
@@ -48,7 +48,7 @@ class RegisterPageViewController: UIViewController,UITextFieldDelegate {
         else if(userPassword != userRepeatPassword)
         {
             // Display an alert message
-            displayMyAlertMessage(userMessage: "Passwords do not match.");
+            displayMyAlertMessage(userMessage: "비밀번호가 일치하지 않습니다");
             return
         }
         
@@ -61,16 +61,16 @@ class RegisterPageViewController: UIViewController,UITextFieldDelegate {
             Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseString
                 { response in
                     
-                    if (response.result.value == "Register Failed")
+                    if (response.result.value == "회원가입 실패")
                     {
-                        self.displayMyAlertMessage(userMessage: "Email already exists.")
+                        self.displayMyAlertMessage(userMessage: "이미 존재하는 아이디입니다")
                     }
                     else
                     {
                          // Display alert message with confirmation
-                        let myAlert = UIAlertController(title : "Alert", message:"Registration is successful. Thank you!", preferredStyle : UIAlertControllerStyle.alert)
+                        let myAlert = UIAlertController(title : "알림", message:"회원가입에 성공 했습니다", preferredStyle : UIAlertControllerStyle.alert)
                         
-                        let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default)
+                        let okAction = UIAlertAction(title:"확인완료", style: UIAlertActionStyle.default)
                         {
                             action in
                             self.dismiss(animated: true, completion:nil)
