@@ -56,9 +56,7 @@ class DetailViewController: UIViewController {
                 let count : Int = appDelegate.cart[Detailmenu]![1]
                 
                 appDelegate.cart.updateValue([Price,count+1,cafelist[detailtitle!]!], forKey: Detailmenu)
-                
-                print(appDelegate.cart[Detailmenu]!)
-                
+                                
                 displaybadge()
                 
                 let myAlert = UIAlertController(title : "Alert", message:"장바구니에 추가되었습니다.", preferredStyle : UIAlertControllerStyle.alert)
@@ -84,7 +82,6 @@ class DetailViewController: UIViewController {
             {
                 displaybadge()
                 
-                print(appDelegate.cart)
                 displayMyAlertMessage(userMessage: "카페 당 한 번씩 주문 할 수 있습니다.")
             }
         }
@@ -122,13 +119,11 @@ class DetailViewController: UIViewController {
     {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
-        
+        menucount = 0
         for (_,value) in appDelegate.cart {
             
             menucount = menucount + value[1]
         }
-        
-        print(menucount)
         
         
         let tabController = appDelegate.window?.rootViewController

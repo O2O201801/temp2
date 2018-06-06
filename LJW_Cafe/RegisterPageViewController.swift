@@ -55,11 +55,9 @@ class RegisterPageViewController: UIViewController,UITextFieldDelegate {
         else
         {
             // connect to server
-<<<<<<< HEAD
-            let url = "http://172.16.12.48:6010/register"
-=======
+            //let url = "http://172.16.12.48:6010/register"
             let url = "http://172.30.1.16:6010/register"
->>>>>>> b8810f353b1ff2e2fa6c65b2e6ffbbb4eb9b8723
+
             Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseString
                 { response in
                     
