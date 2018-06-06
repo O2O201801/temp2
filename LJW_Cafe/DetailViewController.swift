@@ -108,7 +108,7 @@ class DetailViewController: UIViewController {
     {
         let myAlert = UIAlertController(title : "알림", message:userMessage, preferredStyle : UIAlertControllerStyle.alert)
         
-        let okAction = UIAlertAction(title:인, style: UIAlertActionStyle.default, handler:nil)
+        let okAction = UIAlertAction(title:"확인", style: UIAlertActionStyle.default, handler:nil)
         
         myAlert.addAction(okAction)
         
