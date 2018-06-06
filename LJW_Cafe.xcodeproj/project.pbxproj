@@ -20,6 +20,10 @@
 		CD84ADAF20BC4B2A003E74F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD84ADA520BC4B29003E74F0 /* AppDelegate.swift */; };
 		CD84ADB020BC4B2A003E74F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD84ADA620BC4B29003E74F0 /* Assets.xcassets */; };
 		CD84ADB120BC4B2A003E74F0 /* CafeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD84ADA720BC4B2A003E74F0 /* CafeTableViewController.swift */; };
+		CDB9BA7A20C799EF009A9979 /* sample-920-handbag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB9BA7620C799EE009A9979 /* sample-920-handbag@2x.png */; };
+		CDB9BA7B20C799EF009A9979 /* tumblr_nxowq7jJm31ul8y65o1_1280-1-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CDB9BA7720C799EE009A9979 /* tumblr_nxowq7jJm31ul8y65o1_1280-1-1.jpg */; };
+		CDB9BA7C20C799EF009A9979 /* sample-1040-checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB9BA7820C799EE009A9979 /* sample-1040-checkmark@2x.png */; };
+		CDB9BA7D20C799EF009A9979 /* sample-316-truck.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB9BA7920C799EE009A9979 /* sample-316-truck.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		CD84ADA520BC4B29003E74F0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD84ADA620BC4B29003E74F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD84ADA720BC4B2A003E74F0 /* CafeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeTableViewController.swift; sourceTree = "<group>"; };
+		CDB9BA7620C799EE009A9979 /* sample-920-handbag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-920-handbag@2x.png"; sourceTree = "<group>"; };
+		CDB9BA7720C799EE009A9979 /* tumblr_nxowq7jJm31ul8y65o1_1280-1-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tumblr_nxowq7jJm31ul8y65o1_1280-1-1.jpg"; sourceTree = "<group>"; };
+		CDB9BA7820C799EE009A9979 /* sample-1040-checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-1040-checkmark@2x.png"; sourceTree = "<group>"; };
+		CDB9BA7920C799EE009A9979 /* sample-316-truck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sample-316-truck.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,7 @@
 		CD84AD8720BC4AFC003E74F0 /* LJW_Cafe */ = {
 			isa = PBXGroup;
 			children = (
+				CDF7C24520C4F55F00F7B280 /* Figures */,
 				CD84ADA620BC4B29003E74F0 /* Assets.xcassets */,
 				CD84ADA520BC4B29003E74F0 /* AppDelegate.swift */,
 				CD84ADA720BC4B2A003E74F0 /* CafeTableViewController.swift */,
@@ -109,6 +118,17 @@
 				A61561F420C3CD03000C8E84 /* DetailViewController.swift */,
 			);
 			path = LJW_Cafe;
+			sourceTree = "<group>";
+		};
+		CDF7C24520C4F55F00F7B280 /* Figures */ = {
+			isa = PBXGroup;
+			children = (
+				CDB9BA7920C799EE009A9979 /* sample-316-truck.png */,
+				CDB9BA7620C799EE009A9979 /* sample-920-handbag@2x.png */,
+				CDB9BA7820C799EE009A9979 /* sample-1040-checkmark@2x.png */,
+				CDB9BA7720C799EE009A9979 /* tumblr_nxowq7jJm31ul8y65o1_1280-1-1.jpg */,
+			);
+			path = Figures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +195,11 @@
 			files = (
 				CD84ADAC20BC4B2A003E74F0 /* LaunchScreen.storyboard in Resources */,
 				CD84ADB020BC4B2A003E74F0 /* Assets.xcassets in Resources */,
+				CDB9BA7A20C799EF009A9979 /* sample-920-handbag@2x.png in Resources */,
+				CDB9BA7C20C799EF009A9979 /* sample-1040-checkmark@2x.png in Resources */,
+				CDB9BA7D20C799EF009A9979 /* sample-316-truck.png in Resources */,
 				CD84ADAD20BC4B2A003E74F0 /* Main.storyboard in Resources */,
+				CDB9BA7B20C799EF009A9979 /* tumblr_nxowq7jJm31ul8y65o1_1280-1-1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

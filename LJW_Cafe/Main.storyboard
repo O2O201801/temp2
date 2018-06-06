@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="THB-b2-Q5W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="THB-b2-Q5W">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -171,7 +171,7 @@
                             <outlet property="delegate" destination="X7g-iw-xcS" id="YxM-WP-ITY"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="List" id="ufw-eL-meG"/>
+                    <tabBarItem key="tabBarItem" title="List" image="sample-1040-checkmark.png" selectedImage="sample-1040-checkmark.png" id="ufw-eL-meG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yf8-vX-FFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -423,7 +423,7 @@
                             <outlet property="delegate" destination="vtO-pG-BNo" id="Zpn-Hf-L6F"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Cart" id="jmd-R3-nnX"/>
+                    <tabBarItem key="tabBarItem" title="Cart" image="sample-920-handbag.png" selectedImage="sample-316-truck.png" id="jmd-R3-nnX"/>
                     <navigationItem key="navigationItem" title="Title" id="XVa-dS-WMF"/>
                     <connections>
                         <outlet property="cartTab" destination="jmd-R3-nnX" id="N3B-ZY-Ey4"/>
@@ -449,6 +449,11 @@
             <point key="canvasLocation" x="3033" y="562"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sample-1040-checkmark.png" width="28" height="26"/>
+        <image name="sample-316-truck.png" width="32" height="20"/>
+        <image name="sample-920-handbag.png" width="28" height="26"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DuU-hs-Zp2"/>
     </inferredMetricsTieBreakers>
