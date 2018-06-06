@@ -20,9 +20,15 @@ class ReservationViewController: UIViewController {
         dateFormatter.dateStyle = DateFormatter.Style.short
         dateFormatter.timeStyle = DateFormatter.Style.short
         
+<<<<<<< HEAD
+        let strDate = dateFormatter.string(from: DatePicker.date)
+        Date.text = strDate
+        print(strDate)
+=======
         strDate = dateFormatter.string(from: DatePicker.date)
         Date.text = strDate
         
+>>>>>>> 9a60f26499ece4ae6f1580fdb5a75d6f40dd34f7
     }
     
     override func viewDidLoad() {

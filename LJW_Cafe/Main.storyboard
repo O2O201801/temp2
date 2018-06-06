@@ -600,7 +600,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gO-16-j6Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="3844" y="562"/>
+=======
             <point key="canvasLocation" x="3829.5999999999999" y="561.76911544227892"/>
+>>>>>>> 9a60f26499ece4ae6f1580fdb5a75d6f40dd34f7
         </scene>
     </scenes>
     <resources>
