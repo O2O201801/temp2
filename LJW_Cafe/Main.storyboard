@@ -455,6 +455,7 @@
                     <tabBarItem key="tabBarItem" title="Cart" image="sample-920-handbag.png" selectedImage="sample-316-truck.png" id="jmd-R3-nnX"/>
                     <navigationItem key="navigationItem" title="Title" id="XVa-dS-WMF"/>
                     <connections>
+                        <outlet property="BarButton" destination="DeE-d3-sbF" id="nJc-HM-HCS"/>
                         <outlet property="cartTab" destination="jmd-R3-nnX" id="N3B-ZY-Ey4"/>
                     </connections>
                 </tableViewController>

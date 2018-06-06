@@ -11,7 +11,8 @@ import UIKit
 class CartTableViewController: UITableViewController {
     
     @IBOutlet var cartTab: UITabBarItem!
-
+    @IBOutlet var BarButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +28,13 @@ class CartTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if(appDelegate.cart.count == 0)
+        {
+            BarButton.isEnabled = false
+        }
+    }
 
     // MARK: - Table view data source
 
