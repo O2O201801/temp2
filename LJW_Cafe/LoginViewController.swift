@@ -65,7 +65,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 }
                 else
                 {
-                    self.displayMyAlertMessage(userMessage: "등록되지 않은 email입니다")
+                    self.displayMyAlertMessage(userMessage: "등록되지 않은 아이디입니다")
                 }
                 
         }
@@ -75,9 +75,9 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     
     func displayMyAlertMessage(userMessage:String)
     {
-        let myAlert = UIAlertController(title : "Alert", message:userMessage, preferredStyle : UIAlertControllerStyle.alert)
+        let myAlert = UIAlertController(title : "알림", message:userMessage, preferredStyle : UIAlertControllerStyle.alert)
         
-        let okAction = UIAlertAction(title:"OK", style: UIAlertActionStyle.default, handler:nil)
+        let okAction = UIAlertAction(title:"확인", style: UIAlertActionStyle.default, handler:nil)
         
         myAlert.addAction(okAction)
         
