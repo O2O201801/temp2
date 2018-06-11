@@ -485,8 +485,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="예약하기"/>
                                 <connections>
-                                    <action selector="AddMenu:" destination="Dqq-Z4-xzF" eventType="touchUpInside" id="Iaw-hS-XSG"/>
-                                    <action selector="reservtapped:" destination="r35-ED-tOr" eventType="touchUpInside" id="Zhv-24-YMR"/>
                                     <segue destination="A6Z-Is-M0A" kind="show" id="eRR-Zc-hIh"/>
                                 </connections>
                             </button>
